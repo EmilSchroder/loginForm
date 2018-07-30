@@ -1,11 +1,19 @@
+html{
+    font-family: 'Indie Flower', cursive;
+    background-color: rgba(212, 212, 212, 0.781);
+}
+
 form{
     margin: 0 auto;
   }
   
+  .wrapper{
+      margin-left: 10px;
+  }
+
   input{
     display: block;
      margin-top: 10px;
-     margin-left: 25px;
      padding: 5px;
   }
 
@@ -21,15 +29,15 @@ form{
   input[type='text']{
       box-shadow: 0 2px 2px 0 rgba(46, 60, 73, 0.1);
       border: 1px solid rgba(46, 60, 73, 0.5);
-      width: 90%;
-      margin-right: 25px;
+      width: calc(90% - 25px);
   }
 
   input[type='submit']{
+      box-sizing: content-box;
       margin-bottom: 40px;
-      margin-top: 40px;
-      height: 30px;
-      width: 90%;
+      margin-top: 20px;
+      height: 50px;
+      width: calc(90% - 25px);
       color: white;
       background-color: green;
       border: none;
@@ -46,18 +54,27 @@ form{
   }
 
   .welcome{
-    font-size: 30px;
-    margin-top: 15px;
+    font-size: 40px;
+    margin-top: 30px;
     margin-bottom: 15px;
-    margin-left: 25px;
   }
   
   .formBox{
     border: 1px solid;
-    width: 50%;
+    width: 80%;
     height: 66%;
     margin: 0 auto;
     margin-top: 5%;
     box-shadow: 0 20px 20px 0 rgba(46, 60, 73, 0.1);
     border: 1px solid rgba(46, 60, 73, 0.5);
+    background-color: white;
+  }
+
+  @media (min-width: 769px){
+      .formBox{
+          width: 50%;
+      }
+      .wrapper{
+          margin-left: 25px;
+      }
   }
