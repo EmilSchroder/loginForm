@@ -19,5 +19,20 @@ function verify(uName,pWord){
         return("<strong>Please enter a username<strong>");
     } else if (pWord===""){
         return("<strong>Please enter a password<strong>");
+    } else{
+        return(crossCheck(uName,pWord));
+    }
+}
+
+function crossCheck(uName,pWord){
+    if(uName != profile.username1){
+        return('<strong>Username not on record</strong>');
+    } else if(uName == profile.username1){
+        if(pWord == profile.password1){
+            document.getElementById('testerText').style.color = 'green';
+            return('<strong>LOGIN SUCCESSFUL</strong>');
+        } else if(pWord != profile.password1){
+            return('<strong>Password does not match username</strong>');
+        }
     }
 }
