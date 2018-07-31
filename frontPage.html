@@ -6,7 +6,7 @@
     <title>Login to Secrets</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    
     <script src="main.js"></script>
 
 </head>
@@ -21,17 +21,23 @@
                 By signing in you are agreeing to have all of your data harvested forever and ever.
             </p>
             <form>
-                <input type='text' name='username' placeholder="Username">
-                <input type="text" name='password' placeholder="Password">
+                <input type='text' autocomplete="off" name='username' placeholder="Username">
+                <input type="text" autocomplete="off" name='password' placeholder="Password">
                 <div class='rem'>
                     <input type='checkbox' id='rememberMe'>
-                    <span>Remember Me</span>
+                    <span>Remember Me (decorative)</span>
                 </div>
                 <p>
                     Don't let the fun font fool you.
                 </p>
-                <input class='submit' type='submit' value='Submit'>
+                <p>
+                    Username: <strong>test1</strong><br>
+                    Password: <strong>asdf</strong>
+                </p>
+                <input class='submit' type='button' value='Submit' onclick="verify()">
+                
             </form>
+            <p id='testerText'>Hello</p>
         </div>
     </div>
 
